@@ -1,0 +1,198 @@
+<Type Name="JClass" FullName="Caffeine.Jni.JClass">
+  <TypeSignature Language="C#" Value="public class JClass : Caffeine.Jni.JObject" Maintainer="auto" />
+  <AssemblyInfo>
+    <AssemblyName>Caffeine.Jni</AssemblyName>
+    <AssemblyPublicKey>
+    </AssemblyPublicKey>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <AssemblyCulture>neutral</AssemblyCulture>
+    <Attributes />
+  </AssemblyInfo>
+  <ThreadSafetyStatement>This type is safe for multi-threaded operations.</ThreadSafetyStatement>
+  <Docs>
+    <summary>To be added</summary>
+    <remarks>To be added</remarks>
+  </Docs>
+  <Base>
+    <BaseTypeName>Caffeine.Jni.JObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes />
+  <Members>
+    <Member MemberName="ForName">
+      <MemberSignature Language="C#" Value="public static Caffeine.Jni.JClass ForName (string name);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Caffeine.Jni.JClass</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="name">a <see cref="T:System.String" /></param>
+        <returns>a <see cref="T:Caffeine.Jni.JClass" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStaticMethod">
+      <MemberSignature Language="C#" Value="public Caffeine.Jni.JMethod GetStaticMethod (string name, string sig);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Caffeine.Jni.JMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="sig" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="name">a <see cref="T:System.String" /></param>
+        <param name="sig">a <see cref="T:System.String" /></param>
+        <returns>a <see cref="T:Caffeine.Jni.JMethod" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethod">
+      <MemberSignature Language="C#" Value="public Caffeine.Jni.JMethod GetMethod (string name, string sig);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Caffeine.Jni.JMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="sig" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="name">a <see cref="T:System.String" /></param>
+        <param name="sig">a <see cref="T:System.String" /></param>
+        <returns>a <see cref="T:Caffeine.Jni.JMethod" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConstructor">
+      <MemberSignature Language="C#" Value="public Caffeine.Jni.JConstructor GetConstructor (string sig);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Caffeine.Jni.JConstructor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sig" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="sig">a <see cref="T:System.String" /></param>
+        <returns>a <see cref="T:Caffeine.Jni.JConstructor" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConstructor">
+      <MemberSignature Language="C#" Value="public Caffeine.Jni.JConstructor GetConstructor ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Caffeine.Jni.JConstructor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added</summary>
+        <returns>a <see cref="T:Caffeine.Jni.JConstructor" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStaticField">
+      <MemberSignature Language="C#" Value="public Caffeine.Jni.JField GetStaticField (string name, string sig);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Caffeine.Jni.JField</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="sig" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="name">a <see cref="T:System.String" /></param>
+        <param name="sig">a <see cref="T:System.String" /></param>
+        <returns>a <see cref="T:Caffeine.Jni.JField" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetField">
+      <MemberSignature Language="C#" Value="public Caffeine.Jni.JField GetField (string name, string sig);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Caffeine.Jni.JField</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="sig" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="name">a <see cref="T:System.String" /></param>
+        <param name="sig">a <see cref="T:System.String" /></param>
+        <returns>a <see cref="T:Caffeine.Jni.JField" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewInstance">
+      <MemberSignature Language="C#" Value="public Caffeine.Jni.JObject NewInstance ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Caffeine.Jni.JObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added</summary>
+        <returns>a <see cref="T:Caffeine.Jni.JObject" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInstance">
+      <MemberSignature Language="C#" Value="public bool IsInstance (Caffeine.Jni.JObject obj);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <returns>a <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAssignableFrom">
+      <MemberSignature Language="C#" Value="public bool IsAssignableFrom (Caffeine.Jni.JClass other);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Caffeine.Jni.JClass" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="other">a <see cref="T:Caffeine.Jni.JClass" /></param>
+        <returns>a <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuperClass">
+      <MemberSignature Language="C#" Value="public Caffeine.Jni.JClass SuperClass { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Caffeine.Jni.JClass</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added</summary>
+        <returns>a <see cref="T:Caffeine.Jni.JClass" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

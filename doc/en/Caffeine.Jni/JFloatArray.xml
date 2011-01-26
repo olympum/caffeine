@@ -1,0 +1,78 @@
+<Type Name="JFloatArray" FullName="Caffeine.Jni.JFloatArray">
+  <TypeSignature Language="C#" Value="public class JFloatArray : Caffeine.Jni.JArray" Maintainer="auto" />
+  <AssemblyInfo>
+    <AssemblyName>Caffeine.Jni</AssemblyName>
+    <AssemblyPublicKey>
+    </AssemblyPublicKey>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <AssemblyCulture>neutral</AssemblyCulture>
+    <Attributes />
+  </AssemblyInfo>
+  <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
+  <Docs>
+    <summary>To be added</summary>
+    <remarks>To be added</remarks>
+  </Docs>
+  <Base>
+    <BaseTypeName>Caffeine.Jni.JArray</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JFloatArray (Caffeine.Jni.JObject other);" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters>
+        <Parameter Name="other" Type="Caffeine.Jni.JObject" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="other">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <returns>a <see cref="T:Caffeine.Jni.JFloatArray" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JFloatArray (int length);" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters>
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="length">a <see cref="T:System.Int32" /></param>
+        <returns>a <see cref="T:Caffeine.Jni.JFloatArray" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JFloatArray (float [] buf);" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters>
+        <Parameter Name="buf" Type="System.Single[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="buf">a <see cref="T:System.Single" /></param>
+        <returns>a <see cref="T:Caffeine.Jni.JFloatArray" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Elements">
+      <MemberSignature Language="C#" Value="public override object Elements { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added</summary>
+        <returns>a <see cref="T:System.Object" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

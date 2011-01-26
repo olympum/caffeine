@@ -1,0 +1,85 @@
+<Type Name="JNIConfiguration" FullName="Caffeine.Jni.JNIConfiguration">
+  <TypeSignature Language="C#" Value="public class JNIConfiguration" Maintainer="auto" />
+  <AssemblyInfo>
+    <AssemblyName>Caffeine.Jni</AssemblyName>
+    <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 11 00 00 00 D3 3E 3B 24 E9 78 A3 82 FE 07 B4 84 7A 1C 0B 4E E8 13 34 F9 7B 9A BD B0 B7 91 8A D3 FE 12 B0 7F E6 E4 00 6C 81 37 1D 3A 57 A9 80 B0 FC E6 57 4A EA 52 EF 80 4E 39 F5 5E D4 72 C4 76 85 5A 4D B3 32 52 1F 97 F3 D4 B9 13 70 4A 65 28 F8 DD 06 DC 29 8E 1C 41 16 F7 A2 93 9E 8D 76 E2 65 96 BF F0 42 3E B6 4E 7B D3 27 D8 DF 7B EA 3C F8 4B 31 FF C6 0C 10 28 34 3C 42 6D F7 7B 46 3D E9 4B B7 80]</AssemblyPublicKey>
+    <AssemblyVersion>0.1.99.52040</AssemblyVersion>
+    <AssemblyCulture>neutral</AssemblyCulture>
+    <Attributes />
+  </AssemblyInfo>
+  <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
+  <Docs>
+    <summary>To be added</summary>
+    <remarks>To be added</remarks>
+  </Docs>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes />
+  <Members>
+    <Member MemberName="java_class_path">
+      <MemberSignature Language="C#" Value="public string java_class_path;" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="java_library_path">
+      <MemberSignature Language="C#" Value="public string java_library_path;" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="jvm_dll">
+      <MemberSignature Language="C#" Value="public string jvm_dll;" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="java_option">
+      <MemberSignature Language="C#" Value="public string [] java_option;" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JNIConfiguration ();" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters />
+      <Docs>
+        <summary>To be added</summary>
+        <returns>a <see cref="T:Caffeine.Jni.JNIConfiguration" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

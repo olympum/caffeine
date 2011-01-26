@@ -1,0 +1,11 @@
+***************
+*** 5,8 ****
+  CLASSPATH=$CURDIR/caffeinator.jar:$CLASSPATH
+  XML=$2/`basename $1`
+  java -classpath $CLASSPATH com.olympum.tools.JavaApiXmlGenerator $1 $XML
+- java -classpath $CLASSPATH com.olympum.tools.CsJniNetWrapperGenerator $XML $2
+--- 5,8 ----
+  CLASSPATH=$CURDIR/caffeinator.jar:$CLASSPATH
+  XML=$2/`basename $1`
+  java -classpath $CLASSPATH com.olympum.tools.JavaApiXmlGenerator $1 $XML
++ java -Xmx512M -classpath $CLASSPATH com.olympum.tools.CsJniNetWrapperGenerator $XML $2

@@ -1,0 +1,167 @@
+all: build\jninet.dll build\Caffeine.Jni.dll build\generators.jar build\minijavart.dll
+
+build:
+	mkdir build
+
+build\jninet.dll: build glue\jvm.c glue\jninet.def
+	cl /I $(JAVA_HOME)\include /I $(JAVA_HOME)\include\win32 \
+	/D WIN32 /MD /LD glue\jvm.c /obuild\jninet.dll /link /def:glue\jninet.def
+	@del jvm.obj
+
+SOURCES= \
+	src\Caffeine.Jni\AssemblyInfo.cs \
+	src\Caffeine.Jni\JNIEnv.cs \
+	src\Caffeine.Jni\JClass.cs \
+	src\Caffeine.Jni\JConstructor.cs \
+	src\Caffeine.Jni\JField.cs \
+	src\Caffeine.Jni\JMember.cs \
+	src\Caffeine.Jni\JMethod.cs \
+	src\Caffeine.Jni\JObject.cs \
+	src\Caffeine.Jni\JString.cs \
+	src\Caffeine.Jni\JThrowable.cs \
+	src\Caffeine.Jni\JValue.cs \
+	src\Caffeine.Jni\JWeak.cs \
+	src\Caffeine.Jni\JavaVM.cs \
+	src\Caffeine.Jni\JArray.cs \
+	src\Caffeine.Jni\JBooleanArray.cs \
+	src\Caffeine.Jni\JByteArray.cs \
+	src\Caffeine.Jni\JCharArray.cs \
+	src\Caffeine.Jni\JDoubleArray.cs \
+	src\Caffeine.Jni\JFloatArray.cs \
+	src\Caffeine.Jni\JIntArray.cs \
+	src\Caffeine.Jni\JLongArray.cs \
+	src\Caffeine.Jni\JShortArray.cs \
+	src\Caffeine.Jni\JObjectArray.cs \
+	src\Caffeine.Jni\JNISectionHandler.cs
+
+build\Caffeine.Jni.dll: build $(SOURCES)
+	csc /t:library /out:$@ $(SOURCES) 
+
+# Explicit and public API dependencies of "java.lang.Object"
+MINI_JAVART_SOURCES = \
+	build\src\java.io.InputStream.cs \
+	build\src\java.io.OutputStream.cs \
+	build\src\java.io.Serializable.cs \
+	build\src\java.lang.CharSequence.cs \
+	build\src\java.lang.Class.cs \
+	build\src\java.lang.ClassLoader.cs \
+	build\src\java.lang.Cloneable.cs \
+	build\src\java.lang.Comparable.cs \
+	build\src\java.lang.Exception.cs \
+	build\src\java.lang.Object.cs \
+	build\src\java.lang.Package.cs \
+	build\src\java.io.FilterOutputStream.cs \
+	build\src\java.io.PrintStream.cs \
+	build\src\java.io.PrintWriter.cs \
+	build\src\java.io.Writer.cs \
+	build\src\java.lang.Runnable.cs \
+	build\src\java.lang.StackTraceElement.cs \
+	build\src\java.lang.String.cs \
+	build\src\java.lang.StringBuffer.cs \
+	build\src\java.lang.Throwable.cs \
+	build\src\java.lang.reflect.AccessibleObject.cs \
+	build\src\java.lang.reflect.Constructor.cs \
+	build\src\java.lang.reflect.Field.cs \
+	build\src\java.lang.reflect.Member.cs \
+	build\src\java.lang.reflect.Method.cs \
+	build\src\java.net.ContentHandler.cs \
+	build\src\java.net.ContentHandlerFactory.cs \
+	build\src\java.net.FileNameMap.cs \
+	build\src\java.net.URL.cs \
+	build\src\java.net.URLConnection.cs \
+	build\src\java.net.URLStreamHandler.cs \
+	build\src\java.net.URLStreamHandlerFactory.cs \
+	build\src\java.security.CodeSource.cs \
+	build\src\java.security.Guard.cs \
+	build\src\java.security.Key.cs \
+	build\src\java.security.Permission.cs \
+	build\src\java.security.PermissionCollection.cs \
+	build\src\java.security.Principal.cs \
+	build\src\java.security.ProtectionDomain.cs \
+	build\src\java.security.PublicKey.cs \
+	build\src\java.security.cert.Certificate.cs \
+	build\src\java.util.Collection.cs \
+	build\src\java.util.Comparator.cs \
+	build\src\java.util.Dictionary.cs \
+	build\src\java.util.Enumeration.cs \
+	build\src\java.util.Hashtable.cs \
+	build\src\java.util.Iterator.cs \
+	build\src\java.util.Locale.cs \
+	build\src\java.util.Map.cs \
+	build\src\java.util.Set.cs \
+	build\src\javax.naming.Context.cs \
+	build\src\javax.naming.Name.cs \
+	build\src\javax.naming.NameParser.cs \
+	build\src\javax.naming.NamingEnumeration.cs
+
+# reduced version of the java runtime, consisting of all classes required
+# to build "java.lang.Object"
+build\minijavart.dll: build\src
+	csc /r:build\Caffeine.Jni.dll /t:library /out:$@ $(MINI_JAVART_SOURCES)	
+
+CP=build\generators.jar;..\thirdparty\dom4j.jar;$(CLASSPATH)
+
+build\src: build\generators.jar build\rt.xml build\jce.xml build\jsse.xml
+	mkdir build\src
+	java -Xmx256M -classpath $(CP) com.olympum.tools.CsJniNetWrapperGenerator build\rt.xml build\src
+	java -classpath $(CP) com.olympum.tools.CsJniNetWrapperGenerator build\jce.xml build\src
+	java -classpath $(CP) com.olympum.tools.CsJniNetWrapperGenerator build\jsse.xml build\src
+
+build\rt.xml:
+	java -classpath $(CP) com.olympum.tools.JavaApiXmlGenerator \
+		$(JAVA_HOME)\jre\lib\rt.jar $@
+
+build\jce.xml:
+	java -classpath $(CP) com.olympum.tools.JavaApiXmlGenerator \
+		$(JAVA_HOME)\jre\lib\jce.jar $@
+
+build\jsse.xml:
+	java -classpath $(CP) com.olympum.tools.JavaApiXmlGenerator \
+		$(JAVA_HOME)\jre\lib\jsse.jar $@
+
+GENERATOR_CLASSES = \
+	generators\src\java\com\olympum\tools\CsJniNetWrapperGenerator.java \
+	generators\src\java\com\olympum\tools\JavaApiXmlGenerator.java
+
+build\generators.jar: $(GENERATOR_CLASSES)
+	mkdir build\generators
+	javac -classpath $(CP) -d build\generators $(GENERATOR_CLASSES)
+	jar cfv $@ -C build\generators\ .
+
+clean:
+	rmdir /S /Q build
+
+## EXAMPLES ##
+examples: all hello interfaces abstract object
+
+hello: build\HelloWorld.exe build\Prog.class
+
+build\Prog.class: examples\hello\Prog.java
+	javac examples\hello\Prog.java -d build
+
+build\HelloWorld.exe: examples\hello\Prog.cs
+	csc /out:$@ /r:build\Caffeine.Jni.dll /r:build\minijavart.dll examples\hello\HelloWorld.cs examples\hello\Prog.cs 
+
+interfaces: build\TestInterface.exe build\Controllable.class build\Test.class
+
+build\Controllable.class: examples\interfaces\Controllable.java
+	javac -classpath build examples\interfaces\Controllable.java -d build
+
+build\Test.class: examples\interfaces\Test.java
+	javac -classpath build examples\interfaces\Test.java -d build
+
+build\TestInterface.exe: examples\interfaces\Test.cs examples\interfaces\Controllable.cs examples\interfaces\TestInterface.cs
+	csc /out:$@ /r:build\Caffeine.Jni.dll examples\interfaces\Test.cs examples\interfaces\Controllable.cs examples\interfaces\TestInterface.cs 
+
+abstract: build\TestAbstract.exe build\Template.class
+
+build\Template.class: examples\abstract\Template.java
+	javac examples\abstract\Template.java -d build
+
+build\TestAbstract.exe: examples\abstract\Template.cs examples\abstract\TestAbstract.cs
+	csc /out:$@ /r:build\Caffeine.Jni.dll examples\abstract\Template.cs examples\abstract\TestAbstract.cs
+
+object: build\TestObject.exe
+
+build\TestObject.exe: examples\object\TestObject.cs
+	csc /out:$@ /r:build\Caffeine.Jni.dll /r:build\minijavart.dll examples\object\TestObject.cs

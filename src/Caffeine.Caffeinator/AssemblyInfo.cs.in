@@ -1,0 +1,12 @@
+using System.Reflection;
+using System.Runtime.CompilerServices;
+
+[assembly: AssemblyVersion("@VERSION@")]
+[assembly: AssemblyTitle ("Caffeinator")]
+[assembly: AssemblyDescription (".NET Assembly Generator for Caffeine")]
+[assembly: AssemblyCopyright ("Copyright (c) 2004 The Olympum Group")]
+[assembly: AssemblyCompany ("Olympum")]
+[assembly: AssemblyKeyFile("caffeine.snk")]
+[assembly: Mono.UsageComplement("<jar1> ... <jarN>")]
+[assembly: Mono.About("Generates an assembly containing Caffeine .NET proxy classes for the given Jar files.")]
+[assembly: Mono.Author("Bruno Fernandez-Ruiz <brunofr@olympum.com>")] 

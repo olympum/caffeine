@@ -1,0 +1,447 @@
+<Type Name="JMethod" FullName="Caffeine.Jni.JMethod">
+  <TypeSignature Language="C#" Value="public class JMethod : Caffeine.Jni.JObject, IMember" Maintainer="auto" />
+  <AssemblyInfo>
+    <AssemblyName>Caffeine.Jni</AssemblyName>
+    <AssemblyPublicKey>
+    </AssemblyPublicKey>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <AssemblyCulture>neutral</AssemblyCulture>
+    <Attributes />
+  </AssemblyInfo>
+  <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
+  <Docs>
+    <summary>To be added</summary>
+    <remarks>To be added</remarks>
+  </Docs>
+  <Base>
+    <BaseTypeName>Caffeine.Jni.JObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Caffeine.Jni.IMember</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes />
+  <Members>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (Caffeine.Jni.JObject obj, object [] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:System.Object" /></param>
+        <returns>a <see cref="T:System.Object" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (Caffeine.Jni.JObject obj, Caffeine.Jni.JValue[] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="Caffeine.Jni.JValue[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:Caffeine.Jni.JValue" /></param>
+        <returns>a <see cref="T:System.Object" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallBoolean">
+      <MemberSignature Language="C#" Value="public bool CallBoolean (Caffeine.Jni.JObject obj, Caffeine.Jni.JValue[] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="Caffeine.Jni.JValue[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:Caffeine.Jni.JValue" /></param>
+        <returns>a <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallBoolean">
+      <MemberSignature Language="C#" Value="public bool CallBoolean (Caffeine.Jni.JObject obj, object [] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:System.Object" /></param>
+        <returns>a <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallByte">
+      <MemberSignature Language="C#" Value="public byte CallByte (Caffeine.Jni.JObject obj, Caffeine.Jni.JValue[] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="Caffeine.Jni.JValue[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:Caffeine.Jni.JValue" /></param>
+        <returns>a <see cref="T:System.Byte" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallByte">
+      <MemberSignature Language="C#" Value="public byte CallByte (Caffeine.Jni.JObject obj, object [] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:System.Object" /></param>
+        <returns>a <see cref="T:System.Byte" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallChar">
+      <MemberSignature Language="C#" Value="public char CallChar (Caffeine.Jni.JObject obj, Caffeine.Jni.JValue[] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="Caffeine.Jni.JValue[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:Caffeine.Jni.JValue" /></param>
+        <returns>a <see cref="T:System.Char" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallChar">
+      <MemberSignature Language="C#" Value="public char CallChar (Caffeine.Jni.JObject obj, object [] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:System.Object" /></param>
+        <returns>a <see cref="T:System.Char" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallShort">
+      <MemberSignature Language="C#" Value="public short CallShort (Caffeine.Jni.JObject obj, Caffeine.Jni.JValue[] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="Caffeine.Jni.JValue[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:Caffeine.Jni.JValue" /></param>
+        <returns>a <see cref="T:System.Int16" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallShort">
+      <MemberSignature Language="C#" Value="public short CallShort (Caffeine.Jni.JObject obj, object [] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:System.Object" /></param>
+        <returns>a <see cref="T:System.Int16" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallInt">
+      <MemberSignature Language="C#" Value="public int CallInt (Caffeine.Jni.JObject obj, Caffeine.Jni.JValue[] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="Caffeine.Jni.JValue[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:Caffeine.Jni.JValue" /></param>
+        <returns>a <see cref="T:System.Int32" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallInt">
+      <MemberSignature Language="C#" Value="public int CallInt (Caffeine.Jni.JObject obj, object [] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:System.Object" /></param>
+        <returns>a <see cref="T:System.Int32" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallLong">
+      <MemberSignature Language="C#" Value="public long CallLong (Caffeine.Jni.JObject obj, Caffeine.Jni.JValue[] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="Caffeine.Jni.JValue[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:Caffeine.Jni.JValue" /></param>
+        <returns>a <see cref="T:System.Int64" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallLong">
+      <MemberSignature Language="C#" Value="public long CallLong (Caffeine.Jni.JObject obj, object [] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:System.Object" /></param>
+        <returns>a <see cref="T:System.Int64" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallFloat">
+      <MemberSignature Language="C#" Value="public float CallFloat (Caffeine.Jni.JObject obj, Caffeine.Jni.JValue[] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="Caffeine.Jni.JValue[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:Caffeine.Jni.JValue" /></param>
+        <returns>a <see cref="T:System.Single" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallFloat">
+      <MemberSignature Language="C#" Value="public float CallFloat (Caffeine.Jni.JObject obj, object [] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:System.Object" /></param>
+        <returns>a <see cref="T:System.Single" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallDouble">
+      <MemberSignature Language="C#" Value="public double CallDouble (Caffeine.Jni.JObject obj, Caffeine.Jni.JValue[] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="Caffeine.Jni.JValue[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:Caffeine.Jni.JValue" /></param>
+        <returns>a <see cref="T:System.Double" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallDouble">
+      <MemberSignature Language="C#" Value="public double CallDouble (Caffeine.Jni.JObject obj, object [] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:System.Object" /></param>
+        <returns>a <see cref="T:System.Double" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallVoid">
+      <MemberSignature Language="C#" Value="public void CallVoid (Caffeine.Jni.JObject obj, Caffeine.Jni.JValue[] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="Caffeine.Jni.JValue[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:Caffeine.Jni.JValue" /></param>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallVoid">
+      <MemberSignature Language="C#" Value="public void CallVoid (Caffeine.Jni.JObject obj, object [] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:System.Object" /></param>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallObject">
+      <MemberSignature Language="C#" Value="public Caffeine.Jni.JObject CallObject (Caffeine.Jni.JObject obj, Caffeine.Jni.JValue[] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Caffeine.Jni.JObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="Caffeine.Jni.JValue[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:Caffeine.Jni.JValue" /></param>
+        <returns>a <see cref="T:Caffeine.Jni.JObject" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallObject">
+      <MemberSignature Language="C#" Value="public Caffeine.Jni.JObject CallObject (Caffeine.Jni.JObject obj, object [] args);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Caffeine.Jni.JObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Caffeine.Jni.JObject" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="obj">a <see cref="T:Caffeine.Jni.JObject" /></param>
+        <param name="args">a <see cref="T:System.Object" /></param>
+        <returns>a <see cref="T:Caffeine.Jni.JObject" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringClass">
+      <MemberSignature Language="C#" Value="public virtual Caffeine.Jni.JClass DeclaringClass { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Caffeine.Jni.JClass</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added</summary>
+        <returns>a <see cref="T:Caffeine.Jni.JClass" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added</summary>
+        <returns>a <see cref="T:System.String" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

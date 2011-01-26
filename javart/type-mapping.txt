@@ -1,0 +1,15 @@
+C# 	Java
+Type 	Type
+====	====
+sbyte 	byte
+byte 	int
+ushort 	int
+int 	int
+uint 	uint
+short 	short 	
+long 	long
+ulong 	long
+char 	char
+float 	float
+double 	double 	
+bool 	boolean 

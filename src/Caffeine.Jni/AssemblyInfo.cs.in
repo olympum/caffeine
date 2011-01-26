@@ -1,0 +1,9 @@
+using System.Reflection;
+using System.Runtime.CompilerServices;
+
+[assembly: AssemblyVersion("@VERSION@")]
+[assembly: AssemblyTitle ("Caffeine JNI.NET")]
+[assembly: AssemblyDescription ("Java .NET Interoperability via JNI")]
+[assembly: AssemblyCopyright ("Copyright (c) 2004, 2005 Bruno Fernandez-Ruiz")]
+[assembly: AssemblyCompany ("Olympum")]
+[assembly: AssemblyKeyFile("caffeine.snk")]

@@ -1,0 +1,143 @@
+AC_INIT(README)
+AC_CANONICAL_SYSTEM
+AM_INIT_AUTOMAKE(caffeine, 0.2.4)
+AM_MAINTAINER_MODE
+
+AC_CHECK_TOOL(CC, gcc, gcc)
+AC_PROG_CC
+AM_PROG_CC_STDC
+AC_PROG_INSTALL
+AC_LIBTOOL_WIN32_DLL
+AM_PROG_LIBTOOL
+
+case "$host" in
+	*-*-mingw*|*-*-cygwin*)
+		platform_win32=yes
+		AC_DEFINE(_JNI_PLATFORM_WIN32,yes[])
+		CC="gcc -mno-cygwin"
+		HOST_CC="gcc"
+		export CC
+		CPPFLAGS="$CPPFLAGS -DWIN32_THREADS"
+		;;
+esac
+
+AM_CONDITIONAL(_JNI_PLATFORM_WIN32, test "x$platform_win32" = "xyes")
+AM_CONDITIONAL(WIN32, test "x$platform_win32" = "xyes")
+
+CFLAGS='-Wall -pedantic'
+AC_C_CONST
+
+AC_PATH_PROG(PKG_CONFIG, pkg-config, no)
+if test "x$PKG_CONFIG" = "xno"; then
+        AC_MSG_ERROR([You need to install pkg-config])
+fi
+
+MONO_REQUIRED_VERSION=0.90
+PKG_CHECK_MODULES(MONO_DEPENDENCY, mono >= $MONO_REQUIRED_VERSION, has_mono=true, has_mono=false)
+ 
+if test "x$has_mono" = "xtrue"; then
+if test `uname -s` = "Darwin"; then
+        AC_PATH_PROG(RUNTIME, mint, no)
+        AC_PATH_PROG(MCS, mcs, no)
+        LIB_PREFIX=
+        LIB_SUFFIX=.dylib
+else
+        AC_PATH_PROG(RUNTIME, mono, no)
+        AC_PATH_PROG(MCS, mcs, no)
+        LIB_PREFIX=.so
+        LIB_SUFFIX=
+fi
+else
+AC_PATH_PROG(MCS, csc.exe, no)
+if test x$MCS = "xno"; then
+        AC_MSG_ERROR([You need to install either mono or .Net])
+else
+RUNTIME=
+LIB_PREFIX=
+LIB_SUFFIX=.dylib
+fi
+fi
+ 
+CS="C#"
+if test "x$MCS" = "xno" ; then
+        AC_MSG_ERROR([No $CS compiler found])
+fi
+ 
+AC_SUBST(RUNTIME)
+AC_SUBST(MCS)
+AC_SUBST(LIB_PREFIX)
+AC_SUBST(LIB_SUFFIX)
+ 
+MONODOC_REQUIRED_VERSION=0.12
+PKG_CHECK_MODULES(MONODOC_DEPENDENCY, monodoc >= $MONODOC_REQUIRED_VERSION, enable_monodoc=yes, enable_monodoc=no)
+ 
+if test "x$enable_monodoc" = "xyes"; then
+        AC_PATH_PROG(MONODOC, monodoc, no)
+        if test "x$MONODOC" = "xno"; then
+           enable_monodoc=no
+        fi
+else
+        MONODOC=
+fi
+ 
+AC_SUBST(MONODOC)
+AM_CONDITIONAL(ENABLE_MONODOC, test "x$enable_monodoc" = "xyes")
+
+dnl java
+AC_PATH_PROG(JAVA, java, no)
+if test "x$JAVA" = "xno"; then
+	AC_MSG_ERROR([You need to install a JDK 1.4 or higher])
+fi
+AC_SUBST(JAVA)
+
+dnl javac
+AC_PATH_PROG(JAVAC, javac, no)
+if test "x$JAVAC" = "xno"; then
+	AC_MSG_ERROR([You need to install a JDK 1.4 or higher])
+fi
+AC_SUBST(JAVAC)
+
+dnl JAVA_HOME
+if test "x$JAVA_HOME"  = "x"; then
+        AC_MSG_ERROR([You need to set JAVA_HOME to your JDK home directory])
+fi
+
+if test "x$platform_win32" = "xyes"; then
+	JAVAHOME=`cygpath -up $JAVA_HOME`
+else
+	JAVAHOME=$JAVA_HOME
+fi
+AC_SUBST(JAVAHOME)
+JAR=$JAVAHOME/bin/jar
+AC_SUBST(JAR)
+
+dnl directory for jni platform header file
+if test "x$platform_win32" = "xyes"; then
+	JNI_PLATFORM=win32
+else
+	JNI_PLATFORM=`uname -s | tr A-Z a-z`
+fi
+
+AC_SUBST(JNI_PLATFORM)
+
+PATH_TO_ROOT=`pwd`
+AC_SUBST(PATH_TO_ROOT)
+
+AC_OUTPUT([
+Makefile
+caffeine.pc
+glue/Makefile
+src/Makefile
+src/Caffeine.Jni/Makefile
+src/Caffeine.Jni/AssemblyInfo.cs
+src/java/Makefile
+javart/Makefile
+examples/Makefile
+examples/hello/Makefile
+examples/object/Makefile
+examples/abstract/Makefile
+examples/interfaces/Makefile
+examples/generators/Makefile
+examples/jms-client/Makefile
+doc/Makefile
+])

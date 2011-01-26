@@ -1,0 +1,23 @@
+* Remove dom4j.jar (and that includes the license) and javax.jms.jar.
+	Instead these should be downloaded during the build process from the
+	Maven ibiblio repository for dom4j and geronimo-specs
+* Automatic test suite based on NUnit (ships with mono)
+* Java to CLR Callbacks / classes extending C# proxies
+* Documentation
+	- Caffeine.Jni ECMA API
+* Generators
+	- java.lang.Throwable should extend JThrowable
+	- java.lang.String should extend JString
+	- Elimintae new/override warning in JNIImpl classes (interfaces only)
+	- CallXXX using JValue[] instead of "params object[]" boxing (performance)
+	- Peer classes (Java wrappers)
+	- Keywords "new" and "override" not covered completely when a class overwrites
+	or implements a protected/package interface/class.
+	- Static methods in derived classes that hide a static method in the parent
+	class are not handled correctly. C# requires the keyword "new" for these.
+	- Exceptions in signature
+
+Strange BYTECODE in RT.JAR:
+
+sun/security/krb5/internal/ccache/bo.class 
+	[non-inner class marked as static]

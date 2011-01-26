@@ -1,0 +1,83 @@
+About JNI.NET
+============
+
+JNI.NET is a set of bindings for the .NET platform of the Java Native 
+Interface (JNI). JNI.NET allows direct invocation of Java libraries from.NET. 
+For convenience, JNI.NET provides a.NET shared assembly of the Java runtime.
+JNI.NET is part of the free open source project Caffeine [1].
+
+The foundation of JNI.NET are a set of.NET bindings for JNI using P/Invoke. 
+The core of JNI.NET is a generator toolchain that generates C# proxy classes 
+which replicate 1:1 their Java peers, and provides the necessary plumbing, 
+via JNI, to call the Java VM.
+
+JNI.NET is licensed under an MIT/X OSI certified license. You should have
+received a LICENSE file in the same directory as this README file.
+
+Obtaining JNI.NET
+=================
+
+You can download packaged releases and daily tarballs of Caffeine JNI.NET 
+from [1].
+
+The version control archive coordinates of JNI.NET (using GNU arch) are:
+
+archive: brunofr@olympum.com--2004-olympum
+location: http://caffeine.berlios.de/{archives}/2004
+
+project: jni-net--devel--0.1
+
+Requirements
+============
+
+Linux requirements
+------------------
+
+For binary distribution:
+
+    * Mono 0.91 (beta 1) or higher
+    * J2SE 1.4, or compatible, or higher
+
+For source distribution, binary requirements plus:
+
+    * Monodoc 0.10
+
+Windows requirements
+--------------------
+
+For binary distribution:
+
+    * Microsoft .NET Framework 1.1 Redistributable
+    * J2SE 1.4, or compatible, or higher
+
+For source distribution, binary requirements plus:
+
+    * Microsoft .NET Framework SDK 1.1
+    * Microsoft's Windows Platform SDK
+
+Examples
+========
+You can see several examples under the examples directory. examples/generators 
+contains an example on how to use the generators toolchain to create a .NET 
+assembly out of a Java library.
+
+Documentation
+=============
+Please visit [1] for further documentation.
+
+Credits
+=======
+
+    * Bruno Fernandez-Ruiz (maintainer).
+    * Pekka Enberg (contributor).
+
+Feedback
+========
+Please send all feedback, bug reports and patches to: 
+
+caffeine-devel@lists.berlios.de.
+
+References
+==========
+
+[1] http://caffeine.berlios.de/

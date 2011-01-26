@@ -1,0 +1,8 @@
+#!/bin/sh
+CURDIR=`dirname $0`
+mkdir $2
+CLASSPATH=$CURDIR/caffeinator.jar;$CURDIR/dom4j.jar
+XML=$2/`basename $1`
+echo java -classpath "$CLASSPATH" com.olympum.tools.JavaApiXmlGenerator $1 $XML
+java -classpath "$CLASSPATH" com.olympum.tools.JavaApiXmlGenerator $1 $XML
+java -classpath "$CLASSPATH" com.olympum.tools.CsJniNetWrapperGenerator $XML $2

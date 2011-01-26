@@ -1,0 +1,9 @@
+<Namespace Name="Dia" FullName="Dia" FullNameSP="Dia" Maintainer="Auto">
+  <Docs>
+    <summary>JNI.NET is a set of bindings of the Java Native Interface.</summary>
+    <remarks>
+      <para>To be completed
+      </para>
+    </remarks>
+  </Docs>
+</Namespace>
